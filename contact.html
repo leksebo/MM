@@ -2,13 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-
-    <title>Mena's Message's - Contact</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/images/mena logo.jpeg" />
-
-    <link rel="stylesheet" href="assets/CSS/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mena's Message's</title>
   </head>
   <body>
     <!--header-->
@@ -35,46 +30,31 @@
             <a href="blog.html"><strong>Blog</strong></a>
           </li>
           <li>
-            <a href="gallery.html"><strong>Gallery</strong></a>
+            <a href="gallery.html" class="active"><strong>Gallery</strong></a>
           </li>
           <li>
-            <a href="f-content.html" class="active"
-              ><strong>Features & Content</strong></a
-            >
+            <a href="f-content.html"><strong>Featured Content</strong></a>
           </li>
           <li>
-            <a href="contact.html" class="active"><strong>Contact</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
           </li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <h1>Featured Content</h1>
-      <p>Feel free to reach out with any questions or comments!</p>
+      <h1>Contact Mena</h1>
+      <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-      <!-- Featured Content Section -->
-      <section class="featured-content">
-        <h2>Featured Content</h2>
-        <div class="featured-items">
-          <div class="featured-item">
-            <img
-              src="assets/images/Featured content - Pride magazine.jpg"
-              alt="Pride Magazine"
-            />
-            <h3>Pride Magazine</h3>
-            <p>Explore the latest issue of Pride Magazine.</p>
-          </div>
-          <div class="featured-item">
-            <img
-              src="assets/images/Featured content - Voice out Woman magazine.jpg"
-              alt="Voice Out Woman Magazine"
-            />
-            <h3>Voice Out Woman Magazine</h3>
-            <p>Read the latest articles from Voice Out Woman Magazine.</p>
-          </div>
-        </div>
-      </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </main>
 
     <footer>
