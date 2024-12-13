@@ -1,10 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Mobile Navigation Toggle
+document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
+  const navLinks = document.querySelector(".nav-links");
 
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", function () {
-      nav.classList.toggle("active");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
+  }
+
+  // Entry Page - Auto select first radio on load
+  const firstRadio = document.querySelector("#toggle1");
+  if (firstRadio) {
+    firstRadio.checked = true;
   }
 });
