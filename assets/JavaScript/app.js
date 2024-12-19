@@ -49,9 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Event Tracking for Navigation Links
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      console.log(`Navigation link clicked: ${link.getAttribute("href")}`);
+  if (navLinks) {
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        console.log(`Navigation link clicked: ${link.getAttribute("href")}`);
+      });
     });
-  });
+  }
 });
