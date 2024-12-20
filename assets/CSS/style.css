@@ -1,24 +1,27 @@
+/* Import Google Fonts - Dancing Script for decorative text and Poppins for main content */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* Global Styles */
+/* Global CSS Variables - Define color scheme and common values for consistent styling */
 :root {
-  --color-lightest: #ede0d4;
-  --color-light: #e6ccb2;
-  --color-medium: #ddb892;
-  --color-medium-dark: #b08968;
-  --color-dark: #7f5539;
-  --color-accent: #9c6644;
-  --focus-outline-color: #2196f3;
-  --error-color: #d32f2f;
+  --color-lightest: #ede0d4; /* Background color */
+  --color-light: #e6ccb2; /* Light accent color */
+  --color-medium: #ddb892; /* Medium tone for borders */
+  --color-medium-dark: #b08968; /* Darker accent */
+  --color-dark: #7f5539; /* Primary dark color for text */
+  --color-accent: #9c6644; /* Highlight color for interactive elements */
+  --focus-outline-color: #2196f3; /* Color for focus indicators */
+  --error-color: #d32f2f; /* Color for error states */
 }
 
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Accessibility Enhancements */
+/* Accessibility Features */
+/* Skip link for keyboard navigation - hidden by default, visible on focus */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -31,10 +34,10 @@
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 0; /* Appears when focused */
 }
 
-/* Focus Management */
+/* Focus Management - Enhanced visibility for keyboard navigation */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -43,7 +46,7 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* Form Accessibility */
+/* Form Accessibility Styles */
 .form-group {
   margin-bottom: 20px;
 }
@@ -55,6 +58,7 @@ label {
   color: var(--color-dark);
 }
 
+/* Error message styling for form validation */
 .error-message {
   color: var(--error-color);
   font-size: 0.875rem;
@@ -62,11 +66,13 @@ label {
   min-height: 20px;
 }
 
+/* Visual indicator for invalid form fields */
 input[aria-invalid="true"],
 textarea[aria-invalid="true"] {
   border-color: var(--error-color);
 }
 
+/* Base body styles */
 body {
   background-color: var(--color-lightest);
   color: var(--color-dark);
@@ -76,7 +82,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Animations */
+/* Animation Keyframes */
 @keyframes rotate {
   from {
     transform: rotate(360deg);
@@ -110,7 +116,8 @@ body {
   }
 }
 
-/* Typography */
+/* Typography Styles */
+/* Typewriter effect container and animation */
 .typewriter-container {
   display: flex;
   justify-content: center;
@@ -125,7 +132,7 @@ body {
   width: 0;
   animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
   letter-spacing: 0.5px;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Dancing Script", serif;
   font-weight: 700;
   display: inline-block;
@@ -134,6 +141,7 @@ body {
   max-width: 100%;
 }
 
+/* Heading Styles with hover effects */
 h1 {
   color: var(--color-dark);
   text-align: center;
@@ -148,11 +156,7 @@ h1:hover {
   color: var(--color-accent);
 }
 
-h2 {
-  color: var(--color-dark);
-  margin: 0 0 10px;
-}
-
+h2,
 h3 {
   color: var(--color-dark);
   margin: 10px 0;
@@ -163,13 +167,13 @@ p {
   color: var(--color-dark);
 }
 
-/* Images */
+/* Image Styles */
 img {
   width: 100%;
   height: auto;
 }
 
-/* Logo Image */
+/* Logo Image with rotation animation */
 main > a > img {
   border: 8px solid var(--color-light);
   border-radius: 50%;
@@ -190,7 +194,7 @@ main > a > img:hover {
   border-color: var(--color-medium);
 }
 
-/* Content Images */
+/* Content Image Styles */
 .gallery-image,
 .blog-image,
 .featured-item img {
@@ -208,7 +212,7 @@ main > a > img:hover {
   box-shadow: 0 4px 15px var(--color-medium-dark);
 }
 
-/* Header and Navigation */
+/* Header and Navigation Styles */
 header {
   background-color: var(--color-dark);
   padding: 10px 20px;
@@ -218,6 +222,7 @@ header {
   box-shadow: 0 2px 10px var(--color-medium-dark);
 }
 
+/* Navigation Layout */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -226,6 +231,7 @@ header {
   margin: 0 auto;
 }
 
+/* Logo in navigation */
 .nav .logo {
   display: flex;
   align-items: center;
@@ -242,6 +248,7 @@ header {
   transform: scale(1.1);
 }
 
+/* Navigation Links */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -261,12 +268,13 @@ header {
   transform: translateY(-2px);
 }
 
+/* Current page indicator */
 .nav-links a[aria-current="page"] {
   background-color: var(--color-accent);
   font-weight: bold;
 }
 
-/* Responsive Navigation */
+/* Responsive Navigation for Mobile Devices */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -291,6 +299,7 @@ header {
     animation: fadeIn 0.3s ease;
   }
 
+  /* Mobile menu toggle button */
   .nav-toggle {
     display: block;
     cursor: pointer;
@@ -328,7 +337,7 @@ header {
   }
 }
 
-/* Layout */
+/* Main Content Layout */
 main {
   padding: 40px 20px;
   max-width: 600px;
@@ -340,6 +349,7 @@ main {
   border: 2px solid var(--color-medium);
 }
 
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -356,6 +366,7 @@ footer p {
   letter-spacing: 0.5px;
 }
 
+/* Social Media Links */
 .social-media {
   display: flex;
   justify-content: center;
@@ -384,13 +395,14 @@ footer p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Forms */
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Form Input Fields */
 input,
 textarea {
   margin-bottom: 15px;
@@ -403,6 +415,7 @@ textarea {
   width: 100%;
 }
 
+/* Button Styles */
 button {
   background-color: var(--color-dark);
   color: var(--color-lightest);
@@ -419,7 +432,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Gallery */
+/* Gallery Layout */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -436,7 +449,7 @@ figcaption {
   color: var(--color-dark);
 }
 
-/* Blog Posts */
+/* Blog Post Styles */
 .blog-posts {
   display: flex;
   flex-direction: column;
@@ -455,6 +468,7 @@ figcaption {
   box-shadow: 0 4px 15px var(--color-medium-dark);
 }
 
+/* Blog Content Styling */
 .blog-content {
   padding: 15px;
 }
@@ -470,6 +484,7 @@ figcaption {
   color: var(--color-dark);
 }
 
+/* Blog Post Buttons */
 .read-more,
 .close-post {
   background-color: var(--color-dark);
@@ -488,6 +503,7 @@ figcaption {
   transform: scale(1.05);
 }
 
+/* Full Blog Post Content */
 .post-full-content {
   margin-top: 20px;
   padding: 20px;
@@ -500,43 +516,7 @@ figcaption {
   display: none;
 }
 
-.post-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.post-content h3 {
-  margin: 20px 0 10px;
-  color: var(--color-dark);
-}
-
-.post-content p {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.post-content ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-.post-content li {
-  margin-bottom: 8px;
-  color: var(--color-dark);
-}
-
-.close-post {
-  margin-top: 20px;
-  display: block;
-  width: fit-content;
-}
-
-.blog-post.expanded {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* About Page */
+/* About Page Styles */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
@@ -544,14 +524,17 @@ figcaption {
 }
 
 .about-image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: contain; /* Changed from cover to contain to show full image */
   border-radius: 50%;
   margin: 30px auto;
   border: 8px solid var(--color-light);
   box-shadow: 0 4px 15px var(--color-medium-dark);
   transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: var(
+    --color-lightest
+  ); /* Added to ensure background matches when using contain */
 }
 
 .about-image:hover {
@@ -559,6 +542,7 @@ figcaption {
   border-color: var(--color-medium);
 }
 
+/* About Page Content */
 .about-content {
   margin: 30px auto;
   padding: 20px;
@@ -582,6 +566,7 @@ figcaption {
   text-align: justify;
 }
 
+/* About Page Button */
 .about-button {
   background-color: var(--color-dark);
   color: var(--color-lightest);
@@ -600,7 +585,7 @@ figcaption {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Featured Content */
+/* Featured Content Styles */
 .featured-content {
   padding: 20px;
   background-color: var(--color-light);
@@ -625,6 +610,7 @@ figcaption {
   box-shadow: 0 4px 15px var(--color-medium-dark);
 }
 
+/* Animation Classes */
 .fade-in {
   animation: fadeIn 0.5s ease-in;
 }
