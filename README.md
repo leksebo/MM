@@ -1,6 +1,6 @@
 # Mena's Message's - Mind, Fitness & Lifestyle Blog
 
-![Mena's Message's Logo](assets/images/mena%20logo.jpeg)
+![Mena's Message's Logo](./Sreenshots/mena-logo.jpeg)
 
 ## 1. Project Purpose & Description
 
