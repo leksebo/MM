@@ -183,4 +183,4 @@ All rights reserved © 2024 Mena's Message's
 
 ---
 
-> For support or inquiries, please use the contact form on the website.
+> For support or inquiries, feel free to send me a direct message.
