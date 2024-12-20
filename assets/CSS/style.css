@@ -231,6 +231,11 @@ header {
   margin: 0 auto;
 }
 
+/* Hide navigation toggle button on larger screens */
+.nav-toggle {
+  display: none; /* Hidden by default on larger screens */
+}
+
 /* Logo in navigation */
 .nav .logo {
   display: flex;
