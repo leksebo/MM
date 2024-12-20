@@ -169,7 +169,7 @@ p {
 
 /* Image Styles */
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -243,6 +243,7 @@ header {
 .nav .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav .logo img {
@@ -250,10 +251,16 @@ header {
   height: 50px;
   border-radius: 50%;
   transition: transform 0.3s ease;
+  background-color: var(--color-lightest);
+  object-fit: cover;
+  padding: 8px;
+  border: 8px solid var(--color-light);
+  box-shadow: 0 4px 15px var(--color-medium-dark);
 }
 
 .nav .logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-color: var(--color-medium);
 }
 
 /* Navigation Links */
@@ -351,6 +358,8 @@ header {
   .nav .logo img {
     width: 40px;
     height: 40px;
+    padding: 4px;
+    border-width: 4px;
   }
 
   /* Position toggle button in the last column */
@@ -437,6 +446,8 @@ main {
   .nav .logo img {
     width: 36px;
     height: 36px;
+    padding: 3px;
+    border-width: 3px;
   }
 
   h1 {
@@ -462,6 +473,8 @@ main {
   .nav .logo img {
     width: 60px;
     height: 60px;
+    padding: 10px;
+    border-width: 10px;
   }
 
   h1 {
